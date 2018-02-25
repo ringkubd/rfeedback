@@ -3,7 +3,7 @@
     "description": "Website testing feedback",
     "type": "library",
     "license": "MIT",
-    "keywords":["laravel testing feedback",'feedback','php testing','website feedback','laravel feedback'],
+    "keywords":["laravel testing feedback",'testing tools','website testing','laravel testing'],
     "authors": [
         {
             "name": "MD ANWAR JAHID",
