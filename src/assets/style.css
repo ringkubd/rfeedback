@@ -1,0 +1,65 @@
+body {
+    background: #e6e6e6;
+}
+/* ---------- LIVE-CHAT ---------- */
+
+#live-chat {
+  bottom: 0;
+  font-size: 12px;
+  right: 24px;
+  position: fixed;
+  width: 280px;
+  z-index: 9999;
+}
+
+#live-chat header {
+  background: #293239;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+#live-chat h4:before {
+  background: #1a8a34;
+  border-radius: 50%;
+  content: "";
+  height: 8px;
+  margin: 0 8px 0 0;
+  width: 8px;
+}
+
+#live-chat h4 {
+  font-size: 13px;
+  margin: 0;
+  padding: 12px;
+}
+
+#live-chat input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 8px;
+  outline: none;
+  width: 234px;
+}
+
+.chat {
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 2px 15px;
+}
+
+.chat-feedback {
+  font-style: italic;
+  font-size: 13px;
+  padding: 6px 3px;
+}
+.main-search-btn {
+  transition: all .35s;
+  background: orange;
+  border: transparent;
+  color: #fff;
+  padding: 7px 16px;
+}
+.main-search-btn:hover {
+   color: #fff;
+}

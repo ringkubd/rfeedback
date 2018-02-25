@@ -1,0 +1,26 @@
+{
+    "name": "anwar/rfeedback",
+    "description": "Website testing feedback",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MD ANWAR JAHID",
+            "email": "ajr.jahid@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+    "psr-4": {
+      "Anwar\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Anwar\\Rfeedback\\RfeedbackProvider"
+      ]
+    }
+  }
+}
