@@ -17,7 +17,7 @@ class RfeedbackController extends Controller {
 		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
         <link href="vendor/rfeedback/style.css" rel="stylesheet">
 
-		<div id="live-chat">
+		<div id="feedback">
             <header class="clearfix">
               <h4 class='online' style="display: none"><i class="fa fa-envelope"></i> Online - Send a Message</h4>
               <h4 class='offline'><i class="fa fa-envelope"></i> Offline - Leave a Message</h4>
@@ -59,8 +59,7 @@ class RfeedbackController extends Controller {
         $(document).ready(function(){
             /* chat box start ....................................................*/
             $('#live-chat header').on('click', function() {
-              $('.chat').slideToggle(300, 'swing');
-              $('.chat-message-counter').fadeToggle(300, 'swing');
+              $('#feedback').toggleClass('show');
 
             });
             /* chat box end ......................................................*/
