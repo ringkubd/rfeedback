@@ -1,25 +1,35 @@
 body {
     background: #e6e6e6;
 }
-/* ---------- LIVE-CHAT ---------- */
+/* ---------- feedback ---------- */
 
-#live-chat {
-  bottom: 0;
+#feedback {
+  top: 20%;
   font-size: 12px;
   right: 24px;
   position: fixed;
   width: 280px;
   z-index: 9999;
+  right: -280px;
+  transition: all .5s ease-in-out;
+}
+#feedback.show {
+    right: 0;
 }
 
-#live-chat header {
+#feedback header {
   background: #293239;
   border-radius: 5px 5px 0 0;
   color: #fff;
   cursor: pointer;
+  position: absolute;
+  left: -63px;
+  transform: rotate(-90deg);
+  text-align: center;
+  top: 44%;
 }
 
-#live-chat h4:before {
+#feedback h4:before {
   background: #1a8a34;
   border-radius: 50%;
   content: "";
@@ -28,13 +38,13 @@ body {
   width: 8px;
 }
 
-#live-chat h4 {
+#feedback h4 {
   font-size: 13px;
   margin: 0;
   padding: 12px;
 }
 
-#live-chat input[type="text"] {
+#feedback input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 3px;
   padding: 8px;
@@ -45,7 +55,7 @@ body {
 .chat {
   background: #f7f7f7;
   border: 1px solid #ddd;
-  padding: 2px 15px;
+  padding: 15px;
 }
 
 .chat-feedback {
