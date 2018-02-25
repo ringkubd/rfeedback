@@ -19,13 +19,11 @@ class RfeedbackController extends Controller {
 
 		<div id="feedback">
             <header class="clearfix">
-              <h4 class='online' style="display: none"><i class="fa fa-envelope"></i> Online - Send a Message</h4>
-              <h4 class='offline'><i class="fa fa-envelope"></i> Offline - Leave a Message</h4>
+              <h4 class='online'>Feedback</h4> 
             </header>
 
-            <div class="chat" style="display: none;">
-              <p class="chat-feedback" style="display: none">Sorry, we aren't online at the moment. Leave a message and we'll get back to you</p>
-              <p class="chat-feedback">Sorry, we aren't online at the moment. Leave a message and we'll get back to you</p>
+            <div class="chat">
+              
               <form action="$posturl" method="post">
 
               $csrffield
