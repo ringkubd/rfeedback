@@ -58,7 +58,7 @@ class RfeedbackController extends Controller {
 
         $(document).ready(function(){
             /* chat box start ....................................................*/
-            $('#live-chat header').on('click', function() {
+            $('#feedback header').on('click', function() {
               $('#feedback').toggleClass('show');
 
             });
