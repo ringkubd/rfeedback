@@ -10,7 +10,7 @@ class RfeedbackController extends Controller {
 
 	public function view_content() {
 		$csrffield = csrf_field();
-		$posturl = route('rfeedbackpost');
+		$posturl = url('rfeedback');
 		$currenturl = url()->full();
 
 		return $dtd = <<<EOT
