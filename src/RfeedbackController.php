@@ -9,7 +9,11 @@ use Illuminate\Http\Request;
 class RfeedbackController extends Controller {
 
 	public function view_content() {
-		echo $dtd = <<<EOT
+		$csrffield = csrf_field();
+		$posturl = route('rfeedbackpost');
+		$currenturl = url()->full();
+
+		return $dtd = <<<EOT
 		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
         <link href="vendor/rfeedback/style.css" rel="stylesheet">
 
@@ -22,25 +26,26 @@ class RfeedbackController extends Controller {
             <div class="chat" style="display: none;">
               <p class="chat-feedback" style="display: none">Sorry, we aren't online at the moment. Leave a message and we'll get back to you</p>
               <p class="chat-feedback">Sorry, we aren't online at the moment. Leave a message and we'll get back to you</p>
-              <form action="{{ route('rfeedbackpost') }}" method="post">
-              {{ csrf_token() }}
+              <form action="$posturl" method="post">
+
+              $csrffield
                   <div class="form-group">
                     <label for="email">Email address:</label>
                     <input type="email" name="email" class="form-control" id="email">
                   </div>
                   <div class="form-group">
-                    <label for="phone">Phone:</label>
-                    <input type="text" name="name" class="form-control" id="phone">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" class="form-control" id="name">
                   </div>
                   <div class="form-group hidden" >
-                    <input type="url" class="form-control hidden" id="url" value="">
+                    <input type="url" name="url" class="form-control hidden" id="url" value="$currenturl">
                   </div>
                  <div class="form-group">
                   <label for="comment">Comment:</label>
                   <textarea class="form-control" rows="4" name="comment" id="comment"></textarea>
                 </div>
                 <div class="form-group">
-                  <button type="button" class="btn main-search-btn" style="width: 100%;">Save</button>
+                  <button type="submit" class="btn main-search-btn" style="width: 100%;">Save</button>
                 </div>
               </form>
 
@@ -59,9 +64,9 @@ class RfeedbackController extends Controller {
 
             });
             /* chat box end ......................................................*/
-            currenturl = window.location.href;
-            $("#url").value(currenturl);
+
         });
+
 
         </script>
 EOT;
