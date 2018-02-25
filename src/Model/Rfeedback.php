@@ -11,5 +11,10 @@ class Rfeedback extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = [];
+	protected $fillable = [
+		'email',
+		'name',
+		'url',
+		'comment',
+	];
 }
