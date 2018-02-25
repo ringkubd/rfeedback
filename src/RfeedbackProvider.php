@@ -3,6 +3,7 @@
 namespace Anwar\Rfeedback;
 
 use Illuminate\Support\ServiceProvider;
+use Rfeedback;
 
 class RfeedbackProvider extends ServiceProvider {
 	/**
@@ -11,6 +12,9 @@ class RfeedbackProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function boot() {
+		
+		$data = Rfeedback::view_content();
+		view()->share('rfeedback', $data);
 
 		$this->loadRoutesFrom(__DIR__ . '/routes.php');
 		$this->loadMigrationsFrom(__DIR__ . '/Database');
