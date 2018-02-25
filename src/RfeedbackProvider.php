@@ -3,7 +3,7 @@
 namespace Anwar\Rfeedback;
 
 use Illuminate\Support\ServiceProvider;
-use Rfeedback;
+use Anwar\Rfeedback\Facades\RfeedbackFacade as Rfeedback;
 
 class RfeedbackProvider extends ServiceProvider {
 	/**
