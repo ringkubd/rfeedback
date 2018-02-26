@@ -12,18 +12,19 @@ class RfeedbackController extends Controller {
 		$csrffield = csrf_field();
 		$posturl = url('rfeedback');
 		$currenturl = url()->full();
+		$style = \Html::style('vendor/rfeedback/style.css');
+		$script = \Html::script('vendor/rfeedback/js/main.js');
 
 		return $dtd = <<<EOT
 		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
-        <link href="vendor/rfeedback/style.css" rel="stylesheet">
-
+      $style
 		<div id="feedback">
             <header class="clearfix">
-              <h4 class='online'>Feedback</h4> 
+              <h4 class='online'>Feedback</h4>
             </header>
 
             <div class="chat">
-              
+
               <form action="$posturl" method="post">
 
               $csrffield
@@ -51,7 +52,7 @@ class RfeedbackController extends Controller {
 
         </div> <!-- end live-chat -->
 
-        <script src="vendor/rfeedback/js/main.js"></script>
+        $script
         <script type="text/javascript">
 
         $(document).ready(function(){
