@@ -13,7 +13,6 @@ class RfeedbackController extends Controller {
 		$posturl = url('rfeedback');
 		$currenturl = url()->full();
 		$style = \Html::style('vendor/rfeedback/style.css');
-		$script = \Html::script('vendor/rfeedback/js/main.js');
 
 		return $dtd = <<<EOT
 		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
@@ -52,7 +51,6 @@ class RfeedbackController extends Controller {
 
         </div> <!-- end live-chat -->
 
-        $script
         <script type="text/javascript">
 
         $(document).ready(function(){
