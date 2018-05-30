@@ -5,3 +5,13 @@
 
 
 Laravel testing feedback
+
+## Install 
+```
+composer require anwar/rfeedback
+```
+after install just pulished vendor and use it on view like 
+```
+{{$rfeedback}}
+```
+Thats it.
